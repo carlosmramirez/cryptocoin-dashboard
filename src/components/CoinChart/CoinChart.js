@@ -19,6 +19,10 @@ export default function CoinChart(props) {
         }}
         rootProps={{ 'data-testid': '1' }}
       />
+      <input type='radio' value='bitcoin' name='currChart' defaultChecked onChange={props.handleChartChange} /> Bitcoin
+      <input type='radio' value='ethereum' name='currChart' onChange={props.handleChartChange} /> Ethereum
+      <input type='radio' value='dogecoin' name='currChart' onChange={props.handleChartChange} /> Dogecoin
+      
     </div>
   );
 }

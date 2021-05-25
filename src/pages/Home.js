@@ -32,7 +32,7 @@ export default function Home(props) {
      
   return (
     <div>
-      <CoinChart chartData={props.chartData}/> 
+      <CoinChart chartData={props.chartData} handleChartChange={props.handleChartChange}/> 
       <WatchList 
         bitcoinTicker={bitcoinTicker}
         ethereumTicker={ethereumTicker}

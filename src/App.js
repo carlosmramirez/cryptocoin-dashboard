@@ -15,6 +15,7 @@ import { useEffect, useState } from "react";
 function App() {
   const [chartData, setChartData] = useState('');
   const [newsData, setNewsData] = useState('');
+  const [currChart, setCurrChart] = useState('bitcoin')
 
   const currUnixTime = Math.floor(Date.now() / 1000);
   const pastUnixTime = Math.floor(Date.now() / 1000) - 604800; //7 days ago
@@ -22,7 +23,7 @@ function App() {
   // fetch chartData
   useEffect(() => {
     fetch(
-      `https://api.coingecko.com/api/v3/coins/bitcoin/market_chart/range?vs_currency=usd&from=${pastUnixTime}&to=${currUnixTime}`
+      `https://api.coingecko.com/api/v3/coins/${currChart}/market_chart/range?vs_currency=usd&from=${pastUnixTime}&to=${currUnixTime}`
     )
       .then(res => res.json())
       .then(jsonRes => {
@@ -36,7 +37,7 @@ function App() {
         formattedData.unshift(['x', 'bitcoin']);
         setChartData(formattedData);
       })
-  }, [currUnixTime, pastUnixTime]);
+  }, [currChart, currUnixTime, pastUnixTime]);
 
   useEffect(() => {
     fetch(
@@ -51,6 +52,11 @@ function App() {
     return date;
   }
 
+  const handleChartChange = (e) => {
+    console.log('here')
+    setCurrChart(e.target.value);
+  }
+
   return (
     <Router>
       <div>
@@ -63,11 +69,13 @@ function App() {
           <Route exact path='/'>
             <Home 
               chartData={chartData}
+              handleChartChange={handleChartChange}
               newsData={newsData} />
           </Route>
           <Route exact path='/portfolio'>
             <Portfolio
-              chartData={chartData} />
+              chartData={chartData}
+              handleChartChange={handleChartChange} />
           </Route>
           <Route exact path='/news'>
             <News
