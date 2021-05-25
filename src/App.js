@@ -65,7 +65,10 @@ function App() {
               chartData={chartData}
               newsData={newsData} />
           </Route>
-          <Route exact path='/portfolio' component={Portfolio} />
+          <Route exact path='/portfolio'>
+            <Portfolio
+              chartData={chartData} />
+          </Route>
           <Route exact path='/news' component={News} />
         </Switch>
       </div>
