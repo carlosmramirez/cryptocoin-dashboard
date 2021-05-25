@@ -1,9 +1,9 @@
 import CoinNews from "../components/CoinNews/CoinNews";
 
-export default function News() {
+export default function News(props) {
   return (
     <div>
-      {/* <CoinNews /> */}
+      <CoinNews newsData={props.newsData}/>
     </div>
   );
 }

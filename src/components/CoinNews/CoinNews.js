@@ -12,7 +12,8 @@ export default function CoinNews(props) {
                 title={article.title}
                 author={article.author}
                 description={article.description}
-                img={article.urlToImage} 
+                img={article.urlToImage}
+                url={article.url} 
               />
             );
           })

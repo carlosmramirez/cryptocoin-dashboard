@@ -69,7 +69,10 @@ function App() {
             <Portfolio
               chartData={chartData} />
           </Route>
-          <Route exact path='/news' component={News} />
+          <Route exact path='/news'>
+            <News
+              newsData={newsData} />
+          </Route>
         </Switch>
       </div>
 
