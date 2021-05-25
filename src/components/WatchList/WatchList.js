@@ -1,14 +1,14 @@
-export default function WatchList() {
+export default function WatchList(props) {
   return (
     <div>
       <div>
-        Coin 1: $$$$$$
+        Bitcoin: ${props.bitcoinTicker} USD
       </div>
       <div>
-        Coin 2: $$$$$$
+        Ethereum: ${props.ethereumTicker} USD
       </div>
       <div>
-        Coin 3: $$$$$$
+        Dogecoin: ${props.dogecoinTicker} USD
       </div>
     </div>
   );

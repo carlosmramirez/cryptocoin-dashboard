@@ -4,39 +4,39 @@ import CoinChart from '../components/CoinChart/CoinChart.js';
 import WatchList from '../components/WatchList/WatchList.js';
 import CoinNews from '../components/CoinNews/CoinNews.js';
 
-export default function Home() {
-  const [chartData, setChartData] = useState('')
-
-  const currUnixTime = Math.floor(Date.now() / 1000); 
-  const pastUnixTime = Math.floor(Date.now() / 1000) - 604800; //7 days ago
+export default function Home(props) {
+  const [bitcoinTicker, setBitcoinTicker] = useState('');
+  const [ethereumTicker, setEthereumTicker] = useState('');
+  const [dogecoinTicker, setDogecoinTicker] = useState('');
+  const [reload, setReload] = useState(false);
 
   useEffect(() => {
     fetch(
-      `https://api.coingecko.com/api/v3/coins/bitcoin/market_chart/range?vs_currency=usd&from=${pastUnixTime}&to=${currUnixTime}`
+      'https://api.coingecko.com/api/v3/simple/price?ids=bitcoin%2Cethereum%2Cdogecoin&vs_currencies=usd'
     )
     .then(res => res.json())
     .then(jsonRes => {
-      return (
-        jsonRes.prices.map(([time, price]) => {
-          return [timeConverter(time), price];
-        })
-      );
-    })
-    .then(formattedData => {
-      formattedData.unshift(['x', 'bitcoin']);
-      setChartData(formattedData);
-    })
-  },[])
+      setBitcoinTicker(jsonRes.bitcoin.usd);
+      setEthereumTicker(jsonRes.ethereum.usd);
+      setDogecoinTicker(jsonRes.dogecoin.usd);
+      }
+    );
+
+    const interval = setInterval(() => { 
+      setReload(!reload);
+    },30000);
+    return () => {
+      clearInterval(interval);
+    }
+  }, [reload]);
      
-  const timeConverter = (unixTime) => {
-    const date = new Date(unixTime).toLocaleDateString("en-US");
-    return date;
-  }
-  
   return (
     <div>
-      <CoinChart data={chartData}/> 
-      <WatchList />
+      <CoinChart chartData={props.chartData}/> 
+      <WatchList 
+        bitcoinTicker={bitcoinTicker}
+        ethereumTicker={ethereumTicker}
+        dogecoinTicker={dogecoinTicker} />
       <CoinNews />
     </div>
   );

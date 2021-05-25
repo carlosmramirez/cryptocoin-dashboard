@@ -4,17 +4,17 @@ export default function CoinChart(props) {
   return (
     <div>
       <Chart
-        width={'600px'}
-        height={'400px'}
+        width={'100%'}
+        height={'500px'}
         chartType="LineChart"
         loader={<div>Loading Chart</div>}
-        data={props.data}
+        data={props.chartData}
         options={{
           hAxis: {
             title: 'Date Range',
           },
           vAxis: {
-            title: 'Price Per Coin',
+            title: 'Price Per Coin USD',
           },
         }}
         rootProps={{ 'data-testid': '1' }}
