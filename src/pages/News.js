@@ -1,7 +1,9 @@
+import CoinNews from "../components/CoinNews/CoinNews";
+
 export default function News() {
   return (
     <div>
-      News Page
+      {/* <CoinNews /> */}
     </div>
   );
 }

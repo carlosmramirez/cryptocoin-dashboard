@@ -24,7 +24,7 @@ export default function Home(props) {
 
     const interval = setInterval(() => { 
       setReload(!reload);
-    },30000);
+    },60000);
     return () => {
       clearInterval(interval);
     }
@@ -37,7 +37,8 @@ export default function Home(props) {
         bitcoinTicker={bitcoinTicker}
         ethereumTicker={ethereumTicker}
         dogecoinTicker={dogecoinTicker} />
-      <CoinNews />
+      <CoinNews 
+        newsData={props.newsData} />
     </div>
   );
 }
