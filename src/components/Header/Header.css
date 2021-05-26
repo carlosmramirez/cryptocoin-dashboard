@@ -1,0 +1,35 @@
+.header {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  margin: 1rem 0;
+  border-radius: 1rem;
+}
+
+.header img {
+  height: 80%;
+  padding-left: 1rem;
+}
+
+.header-link {
+  height: 2rem;
+  width: 7rem;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+}
+
+.header-link:hover {
+  color: rgb(22, 82, 240);
+  background-color:rgb(233, 246, 255);
+  
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}

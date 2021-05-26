@@ -1,11 +1,11 @@
 import Chart from "react-google-charts";
 
+import './CoinChart.css';
+
 export default function CoinChart(props) {
   return (
-    <div>
+    <div className='chart-container'>
       <Chart
-        width={'100%'}
-        height={'500px'}
         chartType="LineChart"
         loader={<div>Loading Chart</div>}
         data={props.chartData}
@@ -19,9 +19,17 @@ export default function CoinChart(props) {
         }}
         rootProps={{ 'data-testid': '1' }}
       />
-      <input type='radio' value='bitcoin' name='currChart' defaultChecked onChange={props.handleChartChange} /> Bitcoin
-      <input type='radio' value='ethereum' name='currChart' onChange={props.handleChartChange} /> Ethereum
-      <input type='radio' value='dogecoin' name='currChart' onChange={props.handleChartChange} /> Dogecoin
+      <div className='input-container'>
+        <label>
+          <input type='radio' value='bitcoin' name='currChart' defaultChecked onChange={props.handleChartChange} /> Bitcoin
+        </label>
+        <label>
+          <input type='radio' value='ethereum' name='currChart' onChange={props.handleChartChange} /> Ethereum
+        </label>
+        <label>
+          <input type='radio' value='dogecoin' name='currChart' onChange={props.handleChartChange} /> Dogecoin
+        </label>
+      </div>
       
     </div>
   );

@@ -1,0 +1,33 @@
+.info-square-container {
+  background: white;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+.large img {
+  width: fit-content;
+  height: 50%;
+}
+
+
+
+.featured-image {
+  width:fit-content;
+  margin: 0 auto;
+}
+
+.small {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+
+.small img {
+  width: 50%; 
+  height: 50%;
+}
+
+.article-info {
+  padding-left: 1rem;
+}

@@ -1,0 +1,21 @@
+.portfolio-container {
+  height: 85%;
+}
+
+.portfolio-breakdown {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin: 1rem 0;
+  height: 23rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.coin-breakdown {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  margin: 0 auto;
+}

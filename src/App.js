@@ -2,9 +2,9 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link,
 } from "react-router-dom";
 
+import Header from './components/Header/Header.js';
 import Home from './pages/Home.js';
 import Portfolio from './pages/Portfolio.js';
 import News from './pages/News.js';
@@ -59,12 +59,8 @@ function App() {
 
   return (
     <Router>
-      <div>
-        <nav>
-          <Link to="/">Home</Link>
-          <Link to="/portfolio">Portfolio</Link>
-          <Link to="/news">Crypto News</Link>
-        </nav>
+      <div className='app-container'>
+        <Header />
         <Switch>
           <Route exact path='/'>
             <Home 

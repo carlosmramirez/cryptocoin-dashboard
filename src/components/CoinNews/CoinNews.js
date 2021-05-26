@@ -1,8 +1,10 @@
 import InfoSquare from "../InfoSquare/InfoSquare";
 
+import './CoinNews.css';
+
 export default function CoinNews(props) {
   return (
-    <div>
+    <div className='coin-news-container'>
       {
         props.newsData.articles 
         ? props.newsData.articles.map((article, index) => {
@@ -13,7 +15,8 @@ export default function CoinNews(props) {
                 description={article.description}
                 img={article.urlToImage}
                 url={article.url}
-                type={index ? 'small' : 'large'} 
+                type={index ? 'small' : 'large'}
+                isNewsPage={props.isNewsPage} 
               />
             );
           })

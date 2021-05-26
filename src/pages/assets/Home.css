@@ -1,0 +1,23 @@
+.home-container{
+  height: 85%
+}
+
+.coin-chart {
+  height: 33%;
+}
+.watch-list {
+  height: 15%;
+}
+
+.coin-news {
+  height: 52%;
+  overflow-y: scroll;
+  overflow-x: hidden
+}
+
+@media only screen and (min-width: 901px) {
+  .coin-news {
+    width: 75%;
+    margin: 0 auto;
+  }
+}

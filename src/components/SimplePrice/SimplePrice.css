@@ -1,0 +1,9 @@
+.simple-price-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  width: 13rem;
+  height: 3rem;
+  border-radius: 5px;
+}

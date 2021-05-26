@@ -1,0 +1,14 @@
+.chart-cointainer {
+  height: fit-content;
+  width: fit-content
+}
+
+.input-container {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 0.5rem;
+}
+
+svg {
+  border-radius: 1rem;
+}
