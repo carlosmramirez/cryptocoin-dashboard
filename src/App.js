@@ -34,7 +34,7 @@ function App() {
         );
       })
       .then(formattedData => {
-        formattedData.unshift(['x', 'bitcoin']);
+        formattedData.unshift(['x', currChart]);
         setChartData(formattedData);
       })
   }, [currChart, currUnixTime, pastUnixTime]);

@@ -21,15 +21,16 @@ export default function Home(props) {
       setDogecoinTicker(jsonRes.dogecoin.usd);
       }
     );
-
+    
     const interval = setInterval(() => { 
       setReload(!reload);
-    },60000);
+      console.log(reload)
+    },20000);
     return () => {
       clearInterval(interval);
     }
   }, [reload]);
-     
+  console.log(bitcoinTicker, ethereumTicker, dogecoinTicker)   
   return (
     <div>
       <CoinChart chartData={props.chartData} handleChartChange={props.handleChartChange}/> 
