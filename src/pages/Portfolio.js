@@ -3,7 +3,6 @@ import CoinChart from "../components/CoinChart/CoinChart";
 import './assets/Portfolio.css';
 
 export default function Portfolio(props) {
-  
   return (
     <div className='portfolio-container'>
       <CoinChart chartData={props.chartData} handleChartChange={props.handleChartChange}/>
