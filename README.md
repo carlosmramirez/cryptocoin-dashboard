@@ -1,4 +1,8 @@
-# Getting Started with Create React App
+# Getting Started with CryptoCoin-Dashboard
+
+This application will allow any cyrpto investor to track crypto coin prices and market data, track your crypto portfolio, and stay up to date with recent crypto news. The CoinGecko API(https://www.coingecko.com/en/api#explore-api) is leveraged to fetch crypto data and the News API(https://newsapi.org/) is leveraged to fetch crypto news data.
+
+Further development plans include: Adding capability to graph mulitple coins, changing standard conversion currency from USD, adding a positive/negative icon from last fetched value for coin tickers, feature to add new coin to watchlist, refactoring portfolio graph to show change in portfolio value over time, fetch user portfolio data from a database to populate breakdown, allow user to search specific keywords for news data, and add more responsiveness/mobile compatibility. 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

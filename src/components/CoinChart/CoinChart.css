@@ -1,6 +1,5 @@
-.chart-cointainer {
-  height: fit-content;
-  width: fit-content
+.chart-container {
+  width: 100%;
 }
 
 .input-container {

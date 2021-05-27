@@ -9,7 +9,8 @@ export default function CoinNews(props) {
         props.newsData.articles 
         ? props.newsData.articles.map((article, index) => {
             return (
-              <InfoSquare 
+              <InfoSquare
+                key={index} 
                 title={article.title}
                 author={article.author}
                 description={article.description}
