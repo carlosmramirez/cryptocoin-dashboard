@@ -5,10 +5,14 @@ This application will allow any cyrpto investor to track crypto coin prices and 
 Further development plans include: Adding capability to graph mulitple coins, changing standard conversion currency from USD, adding a positive/negative icon from last fetched value for coin tickers, feature to add new coin to watchlist, refactoring portfolio graph to show change in portfolio value over time, fetch user portfolio data from a database to populate breakdown, allow user to search specific keywords for news data, and add improved responsiveness/mobile compatibility. 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-homePage![image](https://user-images.githubusercontent.com/73605526/119880449-442f8b00-befa-11eb-908b-9de86d379865.png)
-portfolioPage![image](https://user-images.githubusercontent.com/73605526/119880503-527da700-befa-11eb-9e48-394decacaeeb.png)
-newsPage![image](https://user-images.githubusercontent.com/73605526/119880526-56112e00-befa-11eb-828a-2cd01d5e9020.png)
-newsPage2![image](https://user-images.githubusercontent.com/73605526/119880540-590c1e80-befa-11eb-99ec-7ad3478e9166.png)
+#### Home Page
+![image](https://user-images.githubusercontent.com/73605526/119880449-442f8b00-befa-11eb-908b-9de86d379865.png)
+#### Portfolio Page
+![image](https://user-images.githubusercontent.com/73605526/119880503-527da700-befa-11eb-9e48-394decacaeeb.png)
+#### News Page (view 1)
+![image](https://user-images.githubusercontent.com/73605526/119880526-56112e00-befa-11eb-828a-2cd01d5e9020.png)
+#### News Page (view 2)
+![image](https://user-images.githubusercontent.com/73605526/119880540-590c1e80-befa-11eb-99ec-7ad3478e9166.png)
 
 ## Available Scripts
 
